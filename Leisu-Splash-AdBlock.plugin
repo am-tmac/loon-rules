@@ -1,0 +1,7 @@
+#!name=Leisu Splash AdBlock
+#!desc=Blocks the verified Leisu splash-ad endpoint only. No MitM required.
+#!author=Hermes
+#!homepage=https://leisu.com
+
+[Rule]
+DOMAIN,adsmartget.datads.cn,REJECT
