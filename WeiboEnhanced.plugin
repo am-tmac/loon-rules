@@ -4,7 +4,7 @@
 #!homepage=https://ddgksf2013.top/rewrite/WeiboEnhanced.conf
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png
 #!tag=去广告
-# 由 Scripts/convert_weibo.py 从 https://raw.githubusercontent.com/ifflagged/Romeo/main/Modules/QuantumultX/ddgksf2013/Official/WeiboEnhanced.conf 生成，勿手改
+# 由 Scripts/convert_weibo.py 从 https://ddgksf2013.top/rewrite/WeiboEnhanced.conf 生成，勿手改
 
 [Script]
 http-request ^https://api\.weibo\.cn/__qx_weibo_settings__/(?:api/config)?(?=[?#]|$) script-path=https://ddgksf2013.top/scripts/weibo_json.js, timeout=60, tag=weibo_json
