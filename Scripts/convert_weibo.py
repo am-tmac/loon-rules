@@ -96,12 +96,7 @@ def main():
     ]
     if rewrites:
         lines += ["[Rewrite]", *rewrites, ""]
-    # Own patch, runs after the author's script on the profile page only: hides 「更多功能」
-    # which the author matches by an itemId newer Weibo no longer uses.
-    patch = ("http-response ^https?://api\\.weibo\\.cn/2/profile/me(?=[?#]|$) "
-             "script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/weibo_more_patch.js, "
-             "requires-body=true, timeout=30, tag=微博更多功能补丁")
-    lines += ["[Script]", *scripts, "# 补丁：隐藏「我」页面的「更多功能」", patch, "", "[MITM]", f"hostname = {hosts}", ""]
+    lines += ["[Script]", *scripts, "", "[MITM]", f"hostname = {hosts}", ""]
     OUT.write_text("\n".join(lines))
     print(f"wrote {OUT.name}: {len(scripts)} scripts, {len(rewrites)} rewrites, version {version}")
 
