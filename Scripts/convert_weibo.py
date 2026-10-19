@@ -86,7 +86,7 @@ def main():
     updated = meta.get("UpdateTime", "?")
     lines = [
         "#!name=微博净化[墨鱼版]",
-        f"#!desc=墨鱼微博助手 规则 {version}（{updated}）· Loon 自动转换，脚本随原作者更新。设置页：Safari 打开 https://api.weibo.cn/__qx_weibo_settings__/",
+        f"#!desc=墨鱼微博助手 · 规则更新于 {updated} · Loon 自动转换，脚本随原作者更新（脚本版本见设置页标题）。设置页：Safari 打开 https://api.weibo.cn/__qx_weibo_settings__/",
         "#!author=@ddgksf2013（原作）",
         "#!homepage=https://ddgksf2013.top/rewrite/WeiboEnhanced.conf",
         "#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png",
