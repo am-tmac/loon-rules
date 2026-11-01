@@ -13,7 +13,6 @@
 ## 腾讯 App 净化（原作 @ZenmoFeiShi）
 
 - 腾讯体育：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/txsports-ad-clean.plugin`
-- 腾讯视频：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/TxvideoAD.plugin`
 
 来源：https://github.com/ZenmoFeiShi/Qx （对应同名 snippet 与 JS）。保留原作逻辑，适配 QX bodyBytes 到 Loon binary-body-mode / Uint8Array，并解码文本分支；体育共享域名仍由脚本检查 QQSportsV3 User-Agent。
 需要启用脚本、MitM 并安装信任证书。不要同时启用同接口的其他净化插件。脚本为本仓库快照，不自动跟随上游；源仓库未确认授权许可，不添加其他许可证声明。
