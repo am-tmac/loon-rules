@@ -1,0 +1,47 @@
+#!name=雷速广告拦截（扩展版）
+#!desc=按用户提供清单封装，含共享广告SDK域名，可能影响其他App的广告/激励视频；未验证iOS实机覆盖。cdn.leisu.com仅拦app-ad路径，需启用MitM并信任证书。不解锁会员。
+#!author=am-tmac（按用户提供规则封装）
+#!homepage=https://github.com/am-tmac/loon-rules
+# 来源：用户提供的域名与路径清单；未独立核实其APK分析或IPA版本声明。
+# 域名规则为全局匹配，不限雷速。若影响其他App，请禁用本插件。
+
+[Rule]
+DOMAIN-SUFFIX,anythinktech.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,ctobsnssdk.com,REJECT
+DOMAIN,log.snssdk.com,REJECT
+DOMAIN,rtlog.snssdk.com,REJECT
+DOMAIN,applog.snssdk.com,REJECT
+DOMAIN-SUFFIX,ubixioe.com,REJECT
+DOMAIN-SUFFIX,statisticslinks.com,REJECT
+DOMAIN,uapi.ads.heytapmobi.com,REJECT
+DOMAIN,adx.ads.heytapmobi.com,REJECT
+DOMAIN,ssp-adx.ads.heytapmobi.com,REJECT
+DOMAIN,adsfs.heytapimage.com,REJECT
+DOMAIN,adsdk.vivo.com.cn,REJECT
+DOMAIN,ssp.vivo.com.cn,REJECT
+DOMAIN,ad.partner.gifshow.com,REJECT
+DOMAIN-SUFFIX,1rtb.net,REJECT
+DOMAIN,sdk-report.1rtb.com,REJECT
+DOMAIN-SUFFIX,shunchangzhixing.com,REJECT
+DOMAIN-SUFFIX,adgain.cn,REJECT
+DOMAIN,cdn2.guangtuikeji.com,REJECT
+DOMAIN-SUFFIX,zhangyuyidong.cn,REJECT
+DOMAIN,apps.bytesfield.com,REJECT
+DOMAIN,apps.bytesfield-b.com,REJECT
+DOMAIN-SUFFIX,puata.info,REJECT
+DOMAIN,oss.cdn.adintl.cn,REJECT
+DOMAIN-SUFFIX,feedsads.cn,REJECT
+DOMAIN-SUFFIX,qquanquan.com,REJECT
+DOMAIN-SUFFIX,hzjizhun.cn,REJECT
+DOMAIN,mi.gdt.qq.com,REJECT
+DOMAIN-SUFFIX,gdtimg.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,mobads-logs.baidu.com,REJECT
+
+[Url Rewrite]
+^https://cdn\.leisu\.com/app-ad/ reject
+
+[Mitm]
+hostname = cdn.leisu.com
