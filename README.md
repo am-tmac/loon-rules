@@ -34,3 +34,17 @@
 拦截 B 站 PCDN/P2P 边缘节点（`*pcdn*.biliapi.net`、`mcdn.bilivideo.cn/.com`、`szbdyd.com`、`mountaintoys.cn`），让播放回落到官方 CDN。规则来源为 X 用户分享，按用户要求封装成独立插件；无脚本、无需 MitM。
 
 注意：PCDN 对部分网络反而更快，拦截后是否变流畅取决于你的线路，建议开启前后各测一段再决定是否保留。
+
+### 两种用法（二选一）
+
+**插件（推荐，含名称/说明）**
+```
+https://raw.githubusercontent.com/am-tmac/loon-rules/main/Bili-PCDN-Block.plugin
+```
+Loon → 配置 → 插件 → 添加 → 粘贴上面的 URL。
+
+**远程规则（只要规则本体）**
+```
+https://raw.githubusercontent.com/am-tmac/loon-rules/main/Bili-PCDN-Block.list
+```
+Loon → 配置 → 规则 → 添加远程规则 → 粘贴 URL。

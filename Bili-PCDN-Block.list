@@ -1,0 +1,8 @@
+# B站 PCDN 拦截（远程规则）
+# 让 B 站播放回落到官方 CDN，缓解 PCDN 供流导致的卡顿
+# 来源：X @gxgexiao 分享的 Surge 规则，转成 Loon 远程规则格式
+DOMAIN-WILDCARD,*pcdn*.biliapi.net,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+DOMAIN-SUFFIX,mountaintoys.cn,REJECT
