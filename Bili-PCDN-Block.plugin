@@ -1,0 +1,14 @@
+#!name=B站 PCDN 拦截
+#!desc=拦截 B 站 PCDN/P2P 边缘节点（mcdn/szbdyd/mountaintoys 等），让播放回落到官方 CDN，缓解卡顿。来源：X @gxgexiao 分享，规则按用户要求封装。
+#!author=am-tmac（按用户提供规则封装）
+#!homepage=https://github.com/am-tmac/loon-rules
+# 说明：这些域名是 B 站的 PCDN 分发节点，部分网络/地区由它们供流反而更慢或不稳定。
+# 拦截后会回落到 B 站官方 CDN；如果你的网络本就依赖这些节点，可能出现反效果，先小范围试用。
+# 只拦 B 站相关域名，不涉及其他站点；无需脚本与 MitM。
+
+[Rule]
+DOMAIN-WILDCARD,*pcdn*.biliapi.net,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT
+DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT
+DOMAIN-SUFFIX,szbdyd.com,REJECT
+DOMAIN-SUFFIX,mountaintoys.cn,REJECT

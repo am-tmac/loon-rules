@@ -26,3 +26,11 @@
 依据用户提供清单封装，包含33条域名规则与1条 `https://cdn.leisu.com/app-ad/` 路径拦截。共享广告SDK域名规则是全局的，可能影响其他App广告、激励视频和相关功能；不是精确的雷速专属策略。原 `Leisu-Splash-AdBlock.plugin` 精简版保留，建议择一使用。
 
 域名拦截无需解密；路径拦截需要打开MitM、安装并信任证书，仅添加 `cdn.leisu.com`，不封整个CDN。未添加无请求证据的业务网关路径。无脚本、无IPA修改、无会员解锁。配置是静态快照，无自动更新上游。已进行结构/规则计数/路径正反例检查与远端字节验证，未进行真实iOS Loon或雷速App测试；来源清单的Android分析及iOS覆盖声明未独立验证。
+
+## B站 PCDN 拦截
+
+订阅：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/Bili-PCDN-Block.plugin`
+
+拦截 B 站 PCDN/P2P 边缘节点（`*pcdn*.biliapi.net`、`mcdn.bilivideo.cn/.com`、`szbdyd.com`、`mountaintoys.cn`），让播放回落到官方 CDN。规则来源为 X 用户分享，按用户要求封装成独立插件；无脚本、无需 MitM。
+
+注意：PCDN 对部分网络反而更快，拦截后是否变流畅取决于你的线路，建议开启前后各测一段再决定是否保留。
