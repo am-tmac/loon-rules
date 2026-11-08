@@ -1,0 +1,12 @@
+#!name=Swipt Loopback
+#!desc=Swipt / StikDebug / SideStore 回环：把 10.7.0.1 送进 Loon TUN 并原样反射回本机，替代 LocalDevVPN。需 Loon Build 1007+；改完要断开再重连 VPN。
+#!author=am-tmac
+#!homepage=https://swipt.io/en/docs/setup/
+#!icon=https://github.com/swipt-automation/swipt/releases/download/nightly/icon.png
+#!tag=工具
+
+[General]
+include-tun = 10.7.0.1/32
+
+[IP Rewrite]
+10.7.0.1 = reflect

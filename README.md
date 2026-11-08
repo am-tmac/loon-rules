@@ -6,6 +6,7 @@
 |---|---|---|
 | 微博净化[墨鱼版] | `https://raw.githubusercontent.com/am-tmac/loon-rules/main/WeiboEnhanced.plugin` | 由 `Scripts/convert_weibo.py` 从墨鱼原版 QX 配置自动转换，GitHub Actions 每 6 小时同步；脚本直接用原作者地址 `ddgksf2013.top/scripts/weibo_json.js`。需开启 MITM。 |
 | Leisu Splash AdBlock | `https://raw.githubusercontent.com/am-tmac/loon-rules/main/Leisu-Splash-AdBlock.plugin` | 雷速开屏广告，无需 MITM。 |
+| Swipt Loopback | `https://raw.githubusercontent.com/am-tmac/loon-rules/main/SwiptLoopback.plugin` | 替代 LocalDevVPN：`include-tun 10.7.0.1/32` + `[IP Rewrite] 10.7.0.1 = reflect`，给 Swipt / StikDebug / SideStore 用。需 Loon Build 1007+，启用后断开重连 VPN。无需 MITM。 |
 
 转换来源顺序：先取原作者 `ddgksf2013.top/rewrite/WeiboEnhanced.conf`，取不到时用逐字镜像。上游出现无法转换的行时任务失败、不覆盖现有插件。
 
