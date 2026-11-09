@@ -1,0 +1,24 @@
+# Apple AI 分流（增强版）— 来源 RocM301/Apple-Rule + ChatGPT
+# Loon 远程规则导入时选择你的节点组（建议美/日节点）
+DOMAIN,guzzoni.apple.com,Proxy
+DOMAIN,wps.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,Proxy
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Proxy
+DOMAIN-SUFFIX,cp4.cloudflare.com,Proxy
+DOMAIN-KEYWORD,siri,Proxy
+DOMAIN,mask.apple-dns.net,Proxy
+DOMAIN,mask-t.apple-dns.net,Proxy
+DOMAIN,mask-api.fe.apple-dns.net,Proxy
+DOMAIN,mask-api.icloud.com,Proxy
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,Proxy
+DOMAIN-SUFFIX,mask.icloud.com,Proxy
+DOMAIN-SUFFIX,mask-h2.icloud.com,Proxy
+DOMAIN-SUFFIX,gateway.icloud.com,Proxy
+DOMAIN-SUFFIX,ls.apple.com,Proxy
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Proxy
+DOMAIN-SUFFIX,chatgpt.com,Proxy
+DOMAIN-SUFFIX,chat.openai.com,Proxy
+DOMAIN-SUFFIX,openai.com,Proxy
+DOMAIN-SUFFIX,oaistatic.com,Proxy
+DOMAIN-SUFFIX,oaiusercontent.com,Proxy

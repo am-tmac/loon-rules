@@ -1,0 +1,43 @@
+#!name=Apple AI 分流（增强版）
+#!desc=基于 RocM301/Apple-Rule 的 Apple Intelligence / Siri / 私有中继清单，并补充 ChatGPT 相关域名。全部走代理，不碰 iCloud 存储与系统更新。
+#!author=am-tmac（清单来源 RocM301/Apple-Rule）
+#!homepage=https://github.com/am-tmac/loon-rules
+# 用法：Loon → 配置 → 插件 → 添加 → 粘贴 raw 链接；把策略名 Proxy 换成你的节点组名（建议用美/日节点）。
+# 地区限制仍由 Apple ID 国家/地区决定，分流只是必要条件。
+
+[Rule]
+# —— Apple Intelligence / 私有云计算 ——
+DOMAIN,guzzoni.apple.com,Proxy
+DOMAIN,wps.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,Proxy
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Proxy
+DOMAIN-SUFFIX,cp4.cloudflare.com,Proxy
+DOMAIN-KEYWORD,siri,Proxy
+
+# —— 私有中继 / 掩码 DNS（iCloud+ Private Relay 与 PCC 走这里）——
+DOMAIN,mask.apple-dns.net,Proxy
+DOMAIN,mask-t.apple-dns.net,Proxy
+DOMAIN,mask-api.fe.apple-dns.net,Proxy
+DOMAIN,mask-api.icloud.com,Proxy
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,Proxy
+DOMAIN-SUFFIX,mask.icloud.com,Proxy
+DOMAIN-SUFFIX,mask-h2.icloud.com,Proxy
+DOMAIN-SUFFIX,gateway.icloud.com,Proxy
+
+# —— 定位与激活相关（让 Apple 判定为支持地区）——
+DOMAIN-SUFFIX,ls.apple.com,Proxy
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Proxy
+
+# —— ChatGPT 延伸功能 ——
+DOMAIN-SUFFIX,chatgpt.com,Proxy
+DOMAIN-SUFFIX,chat.openai.com,Proxy
+DOMAIN-SUFFIX,openai.com,Proxy
+DOMAIN-SUFFIX,oaistatic.com,Proxy
+DOMAIN-SUFFIX,oaiusercontent.com,Proxy
+
+# —— 以下两条默认不启用，按需打开 ——
+# 遥测上报，走不走都行
+# DOMAIN-SUFFIX,smoot.apple.com
+# App Store 资源 CDN，走代理会拖慢下载
+# DOMAIN-SUFFIX,apps.mzstatic.com
