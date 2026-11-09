@@ -49,3 +49,13 @@ Loon → 配置 → 插件 → 添加 → 粘贴上面的 URL。
 https://raw.githubusercontent.com/am-tmac/loon-rules/main/Bili-PCDN-Block.list
 ```
 Loon → 配置 → 规则 → 添加远程规则 → 粘贴 URL。
+
+## Apple Intelligence / Siri AI 分流
+
+订阅：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/Apple-Intelligence-AI.plugin`
+
+把 Apple Intelligence（Private Cloud Compute：`apple-relay.apple.com`）、Siri（`guzzoni.apple.com`）和 ChatGPT 延伸功能（`chatgpt.com`/`openai.com` 等）的流量强制走代理。只接管这些域名，不碰 iCloud、App Store 等普通 Apple 流量。
+
+**用法**：插件里的策略名 `Proxy` 需换成你自己的节点组名（如「手动切换」「自动选择」），否则规则可能不命中。
+
+**前提**：iOS 的地区限制主要看 **Apple ID 国家/地区**，仅靠网络分流不保证解锁；分流是必要条件之一。若设置里仍提示「此地区无法使用」，需要把 Apple ID 地区切到支持区。

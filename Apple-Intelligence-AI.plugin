@@ -1,0 +1,25 @@
+#!name=Apple Intelligence / Siri AI 分流
+#!desc=把 Apple Intelligence（Private Cloud Compute）、Siri 与 ChatGPT 延伸功能的流量强制走代理，避免被地区判定拦截。只接管 AI 相关域名，不影响 iCloud/App Store 等普通 Apple 流量。
+#!author=am-tmac
+#!homepage=https://github.com/am-tmac/loon-rules
+# 用法：Loon → 配置 → 插件 → 添加 → 粘贴 raw 链接。
+# 说明：把下面的策略名 Proxy 换成你自己的节点组名（如「手动切换」「自动选择」）。
+# 注意：地区限制主要由 Apple ID 国家/地区决定，仅靠分流不保证解锁；分流是必要条件之一。
+
+[Rule]
+# —— Apple Intelligence / Private Cloud Compute ——
+DOMAIN-SUFFIX,apple-relay.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,Proxy
+DOMAIN-SUFFIX,apple-relay.mask.apple.com,Proxy
+DOMAIN-SUFFIX,guzzoni.apple.com,Proxy
+DOMAIN-SUFFIX,siri.apple.com,Proxy
+
+# —— ChatGPT 延伸功能 / OpenAI ——
+DOMAIN-SUFFIX,chatgpt.com,Proxy
+DOMAIN-SUFFIX,chat.openai.com,Proxy
+DOMAIN-SUFFIX,openai.com,Proxy
+DOMAIN-SUFFIX,oaistatic.com,Proxy
+DOMAIN-SUFFIX,oaiusercontent.com,Proxy
+DOMAIN-SUFFIX,sora.com,Proxy
+DOMAIN-SUFFIX,livekit.cloud,Proxy
+
