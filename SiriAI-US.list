@@ -20,5 +20,6 @@ DOMAIN,mask-api.fe2.apple-dns.net
 DOMAIN,apple-relay.akamaized.net
 DOMAIN,apple-carry-relay.cloudflare.com
 DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,bag.itunes.apple.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com

@@ -24,6 +24,7 @@ host, apple-relay.akamaized.net, proxy
 host, apple-carry-relay.cloudflare.com, proxy
 # 地区判定
 host, gspe1-ssl.ls.apple.com, proxy
+host, bag.itunes.apple.com, proxy
 # ChatGPT 扩展
 host-suffix, openai.com, proxy
 host-suffix, chatgpt.com, proxy
