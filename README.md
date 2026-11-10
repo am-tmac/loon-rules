@@ -68,3 +68,9 @@ Loon → 配置 → 规则 → 添加远程规则 → 粘贴 URL。
 - 美国节点：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/QuantumultX/AppleAI_US.list`（强制策略选美国节点）
 
 两条都要拖到所有 Apple 分流规则之前；同时关掉 iRingo/NSRingo 的定位服务和 Siri 模块。
+
+### Quantumult X：Siri AI 全走美国节点（英语 Siri AI / 美版设备）
+
+`https://raw.githubusercontent.com/am-tmac/loon-rules/main/QuantumultX/AppleAI_SiriAI_US.list`
+
+Siri（guzzoni/smoot 等）也走代理。和上面的「Siri 直连」二选一，不要同时启用。

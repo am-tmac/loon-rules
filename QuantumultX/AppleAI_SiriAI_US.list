@@ -1,0 +1,26 @@
+# NAME: Apple 智能 + Siri AI 全走美国节点（英语 Siri AI / 美版设备用）
+# 来源: 小红书截图 Clash 规则（16 条）转 QX；与 AppleAI_Direct.list 互斥，二选一
+# 用法: 强制策略设为美国节点；放在所有 Apple 分流规则之前
+# Siri / Apple Intelligence
+host, gateway.icloud.com, proxy
+host, seed.siri.apple.com, proxy
+host, probe.icloud.com, proxy
+host, metrics.icloud.com, proxy
+host, guzzoni.apple.com, proxy
+host-suffix, smoot.apple.com, proxy
+# Private Cloud Compute
+host, apple-relay.apple.com, proxy
+host, apple-relay.cloudflare.com, proxy
+host, apple-relay.fastly-edge.com, proxy
+host, cp4.cloudflare.com, proxy
+# relay / bootstrap
+host, apple-relay.mask.apple-dns.net, proxy
+host, mask-api.icloud.com, proxy
+host, mask-api.fe2.apple-dns.net, proxy
+host, apple-relay.akamaized.net, proxy
+host, apple-carry-relay.cloudflare.com, proxy
+# 地区判定
+host, gspe1-ssl.ls.apple.com, proxy
+# ChatGPT 扩展
+host-suffix, openai.com, proxy
+host-suffix, chatgpt.com, proxy
