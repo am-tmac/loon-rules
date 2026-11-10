@@ -31,5 +31,5 @@ DOMAIN,mask-api.fe.apple-dns.net
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN,smp-device-content.apple.com
 DOMAIN,setup.icloud.com
-DOMAIN,p150-acsegataway.icloud.com
+DOMAIN,p150-acsegateway.icloud.com
 DOMAIN-SUFFIX,icloud-content.com
