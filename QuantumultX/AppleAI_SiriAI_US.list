@@ -3,6 +3,7 @@
 # 用法: 强制策略设为美国节点；放在所有 Apple 分流规则之前
 # Siri / Apple Intelligence
 host, gateway.icloud.com, proxy
+host-suffix, siri.apple.com, proxy
 host, seed.siri.apple.com, proxy
 host, api-siri-prod.apple.com, proxy
 host, wps.apple.com, proxy
