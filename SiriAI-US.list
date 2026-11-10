@@ -1,9 +1,9 @@
-# NAME: Siri AI + Apple 智能 + ChatGPT（全走代理）
+# NAME: Siri AI + Apple 智能（全走代理）
+# OpenAI/ChatGPT 域名已交给 iKeLee 配置自带的 AI.lsr（美国手动策略），此处不再重复
 # 来源: 小红书截图 Clash 规则（16 条）+ ChatGPT 扩展；QX 版 QuantumultX/AppleAI_SiriAI_US.list 同内容
 # 用法: Loon → 配置 → 规则 → 添加远程规则，策略选美国/台湾节点组；拖到所有 Apple 规则之前
 DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,siri.apple.com
-DOMAIN,seed.siri.apple.com
 DOMAIN,api-siri-prod.apple.com
 DOMAIN,wps.apple.com
 DOMAIN,probe.icloud.com
@@ -20,9 +20,6 @@ DOMAIN,mask-api.fe2.apple-dns.net
 DOMAIN,apple-relay.akamaized.net
 DOMAIN,apple-carry-relay.cloudflare.com
 DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN,bag.itunes.apple.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
 # PCC 令牌发放 / 中继补充（@suiikal 实测攻略）
 DOMAIN-SUFFIX,issuer.apple.com
 DOMAIN,ropes.apple.com
@@ -30,4 +27,3 @@ DOMAIN,mask.icloud.com
 DOMAIN,mask-h2.icloud.com
 DOMAIN,mask.apple-dns.net
 DOMAIN,mask-api.fe.apple-dns.net
-DOMAIN-SUFFIX,oaistatic.com
