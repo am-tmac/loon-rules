@@ -23,3 +23,11 @@ DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,bag.itunes.apple.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
+# PCC 令牌发放 / 中继补充（@suiikal 实测攻略）
+DOMAIN-SUFFIX,issuer.apple.com
+DOMAIN,ropes.apple.com
+DOMAIN,mask.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask.apple-dns.net
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN-SUFFIX,oaistatic.com

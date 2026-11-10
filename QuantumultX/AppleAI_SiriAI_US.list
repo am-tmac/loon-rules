@@ -28,3 +28,11 @@ host, bag.itunes.apple.com, proxy
 # ChatGPT 扩展
 host-suffix, openai.com, proxy
 host-suffix, chatgpt.com, proxy
+# PCC 令牌发放 / 中继补充（@suiikal 实测攻略）
+host-suffix, issuer.apple.com, proxy
+host, ropes.apple.com, proxy
+host, mask.icloud.com, proxy
+host, mask-h2.icloud.com, proxy
+host, mask.apple-dns.net, proxy
+host, mask-api.fe.apple-dns.net, proxy
+host-suffix, oaistatic.com, proxy
