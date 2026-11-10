@@ -80,3 +80,15 @@ Siri（guzzoni/smoot 等）也走代理。和上面的「Siri 直连」二选一
 `https://raw.githubusercontent.com/am-tmac/loon-rules/main/SiriAI-US.list`
 
 Loon → 配置 → 规则 → 添加远程规则，策略选你的节点组，拖到所有 Apple 规则之前。与 Apple-Intelligence-AI / Apple-AI-Full 内容重叠，只开一个。
+
+## 拒绝 QUIC（Loon 插件）
+
+订阅：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/No-QUIC.plugin`
+
+规则只有一条 `PROTOCOL,QUIC,REJECT`。作用是让 UDP/443 的 QUIC 回落 TCP：
+
+- 避免 QUIC 绕过分流规则（有些客户端对 QUIC 的规则匹配不完整，容易出现「明明设了规则却直连」）
+- 避免 UDP 443 被运营商 QoS 时出现卡顿、测速异常
+- 代价：极少数纯 QUIC 服务会稍慢，浏览器会自动回落，一般无感
+
+需不需要取决于你的线路：UDP 稳定的话收益有限；UDP 被限速或经常卡顿时收益明显。

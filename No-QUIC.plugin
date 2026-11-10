@@ -1,0 +1,9 @@
+#!name=拒绝 QUIC（防误判 + 提速）
+#!desc=拦截 QUIC/UDP 443 流量，强制回落 TCP。目的不是“防识别”而是：① 避免 QUIC 绕过你的分流规则直连；② 避免 UDP 443 打洞导致测速/延迟异常；③ 部分线路 UDP 被 QoS 时回落 TCP 更稳。
+#!author=am-tmac
+#!homepage=https://github.com/am-tmac/loon-rules
+# 用法：Loon → 配置 → 插件 → 添加 → 粘贴 raw 链接。
+# 说明：拦截后浏览器/App 会自动回落到 TCP，体感通常无差异；少数纯 QUIC 服务（如部分 Google 服务）会慢一点点。
+
+[Rule]
+PROTOCOL,QUIC,REJECT
