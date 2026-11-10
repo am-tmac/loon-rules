@@ -59,3 +59,12 @@ Loon → 配置 → 规则 → 添加远程规则 → 粘贴 URL。
 **用法**：插件里的策略名 `Proxy` 需换成你自己的节点组名（如「手动切换」「自动选择」），否则规则可能不命中。
 
 **前提**：iOS 的地区限制主要看 **Apple ID 国家/地区**，仅靠网络分流不保证解锁；分流是必要条件之一。若设置里仍提示「此地区无法使用」，需要把 Apple ID 地区切到支持区。
+
+## Quantumult X：Apple 智能分流（国行改 LL/A 方案）
+
+来源：@RZ7Vc 的 Erosion 中文修复版教程第四节。Siri 语音必须直连，PCC、资格校验和 ChatGPT 走美国节点。
+
+- Siri 直连：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/QuantumultX/AppleAI_Direct.list`
+- 美国节点：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/QuantumultX/AppleAI_US.list`（强制策略选美国节点）
+
+两条都要拖到所有 Apple 分流规则之前；同时关掉 iRingo/NSRingo 的定位服务和 Siri 模块。

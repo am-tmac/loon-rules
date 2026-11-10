@@ -1,0 +1,8 @@
+# NAME: Apple 智能 - Siri 直连（国行改 LL/A 方案）
+# 来源: @RZ7Vc Erosion 中文修复版教程 第四节
+# 用法: 放在所有 Apple 分流规则之前，策略保持 direct
+host-suffix, guzzoni.apple.com, direct
+host-suffix, siri.apple.com, direct
+host, dejavu.apple.com, direct
+host, sequoia.apple.com, direct
+host-suffix, smoot.apple.com, direct
