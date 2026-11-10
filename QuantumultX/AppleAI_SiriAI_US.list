@@ -34,3 +34,9 @@ host, mask-h2.icloud.com, proxy
 host, mask.apple-dns.net, proxy
 host, mask-api.fe.apple-dns.net, proxy
 host-suffix, oaistatic.com, proxy
+# 国行地区判定补充
+host, gs-loc-cn.apple.com, proxy
+host, smp-device-content.apple.com, proxy
+host, setup.icloud.com, proxy
+host, p150-acsegataway.icloud.com, proxy
+host-suffix, icloud-content.com, proxy
