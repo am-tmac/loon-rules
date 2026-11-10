@@ -4,6 +4,8 @@
 # Siri / Apple Intelligence
 host, gateway.icloud.com, proxy
 host, seed.siri.apple.com, proxy
+host, api-siri-prod.apple.com, proxy
+host, wps.apple.com, proxy
 host, probe.icloud.com, proxy
 host, metrics.icloud.com, proxy
 host, guzzoni.apple.com, proxy
