@@ -74,3 +74,9 @@ Loon → 配置 → 规则 → 添加远程规则 → 粘贴 URL。
 `https://raw.githubusercontent.com/am-tmac/loon-rules/main/QuantumultX/AppleAI_SiriAI_US.list`
 
 Siri（guzzoni/smoot 等）也走代理。和上面的「Siri 直连」二选一，不要同时启用。
+
+## Loon：Siri AI 全走代理（远程规则）
+
+`https://raw.githubusercontent.com/am-tmac/loon-rules/main/SiriAI-US.list`
+
+Loon → 配置 → 规则 → 添加远程规则，策略选你的节点组，拖到所有 Apple 规则之前。与 Apple-Intelligence-AI / Apple-AI-Full 内容重叠，只开一个。
