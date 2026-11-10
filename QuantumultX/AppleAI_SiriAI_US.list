@@ -11,7 +11,7 @@ host, metrics.icloud.com, proxy
 host, guzzoni.apple.com, proxy
 host-suffix, smoot.apple.com, proxy
 # Private Cloud Compute
-host, apple-relay.apple.com, proxy
+host-suffix, apple-relay.apple.com, proxy
 host, apple-relay.cloudflare.com, proxy
 host, apple-relay.fastly-edge.com, proxy
 host, cp4.cloudflare.com, proxy
