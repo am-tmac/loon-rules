@@ -11,6 +11,12 @@
 转换来源顺序：先取原作者 `ddgksf2013.top/rewrite/WeiboEnhanced.conf`，取不到时用逐字镜像。上游出现无法转换的行时任务失败、不覆盖现有插件。
 
 
+## 节点阻断检测（原作 RavelloH）
+
+订阅：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/Block-Check.plugin`
+
+判断节点是挂了还是被 GFW/运营商阻断：节点列表长按节点 → 「节点阻断检测」。脚本由 `Scripts/convert_block_check.py` 每 6 小时同步原作者 gist（`.github/workflows/sync-block-check.yml`），把 QX 的 `$task.fetch` / `$configuration` / `$environment` 桥接到 Loon 的 `$httpClient` 与 `$environment.params.node/nodeInfo`；上游改动对不上桥接时任务失败、不覆盖现有脚本。已用 Node 模拟 Loon 运行时测试，未在真机 Loon 上验证。
+
 ## 腾讯 App 净化（原作 @ZenmoFeiShi）
 
 - 腾讯体育：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/txsports-ad-clean.plugin`

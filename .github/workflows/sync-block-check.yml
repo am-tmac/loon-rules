@@ -1,0 +1,26 @@
+name: Sync block-check
+on:
+  schedule:
+    - cron: "47 */6 * * *"   # every 6 hours
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Convert upstream QX block_check.js to Loon
+        run: python3 Scripts/convert_block_check.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- Scripts/block_check.js; then echo "no change"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Scripts/block_check.js
+          git commit -m "sync: block_check from upstream"
+          git pull --rebase
+          git push
