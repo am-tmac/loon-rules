@@ -41,12 +41,24 @@ var __qxTask = {
       if (req.opts && req.opts.policy) o.node = req.opts.policy;
       var m = String(req.method || "GET").toLowerCase();
       var fn = $httpClient[m] || $httpClient.get;
-      fn(o, function (err, resp, data) {
-        var tagLog = "[阻断检测] " + m.toUpperCase() + " " + req.url + (o.node ? " via " + o.node : "") + " -> ";
-        if (err) { console.log(tagLog + "错误: " + err); return reject(err); }
-        console.log(tagLog + "HTTP " + (resp && resp.status) + " " + String(data || "").slice(0, 160));
-        resolve({ statusCode: resp && resp.status, headers: resp && resp.headers, body: data });
-      });
+      // Third-party probe APIs (no node pinned) follow the user's rules; if that route
+      // can't reach them, retry once DIRECT before giving up.
+      var send = function (opt, retried) {
+        fn(opt, function (err, resp, data) {
+          var tagLog = "[阻断检测] " + m.toUpperCase() + " " + req.url + (opt.node ? " via " + opt.node : "") + " -> ";
+          if (err) {
+            console.log(tagLog + "错误: " + err);
+            if (!retried && !(req.opts && req.opts.policy)) {
+              var o2 = {}; for (var k in opt) o2[k] = opt[k]; o2.node = "DIRECT";
+              return send(o2, true);
+            }
+            return reject(err);
+          }
+          console.log(tagLog + "HTTP " + (resp && resp.status) + " " + String(data || "").slice(0, 160));
+          resolve({ statusCode: resp && resp.status, headers: resp && resp.headers, body: data });
+        });
+      };
+      send(o, false);
     });
   }
 };

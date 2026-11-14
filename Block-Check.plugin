@@ -5,4 +5,4 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 
 [Script]
-generic script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/block_check.js, tag=节点阻断检测, timeout=40, img-url=bolt.horizontal.icloud.fill.system
+generic script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/block_check.js, tag=节点阻断检测, timeout=60, img-url=bolt.horizontal.icloud.fill.system
