@@ -16,7 +16,7 @@
 - 腾讯体育：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/txsports-ad-clean.plugin`
 
 来源：https://github.com/ZenmoFeiShi/Qx （对应同名 snippet 与 JS）。保留原作逻辑，适配 QX bodyBytes 到 Loon binary-body-mode / Uint8Array，并解码文本分支；体育共享域名仍由脚本检查 QQSportsV3 User-Agent。
-需要启用脚本、MitM 并安装信任证书。不要同时启用同接口的其他净化插件。脚本为本仓库快照，不自动跟随上游；源仓库未确认授权许可，不添加其他许可证声明。
+需要启用脚本、MitM 并安装信任证书。不要同时启用同接口的其他净化插件。腾讯体育插件与脚本由 `Scripts/convert_txsports.py` 每 6 小时自动同步上游（`.github/workflows/sync-txsports.yml`），并移除直播比分接口 `m/match/liveSum`、`match/multiUpdate`（原作会清空直播比赛数据，导致直播卡顿）；上游改动导致适配补丁对不上时任务失败、不覆盖现有文件。源仓库未确认授权许可，不添加其他许可证声明。
 已进行 Node 语法、模拟二进制文本响应、UA隔离及异常数据透传测试；未在真实 iOS Loon / 腾讯 App 上验证广告效果。不承诺去除所有播放广告或解锁会员。
 
 

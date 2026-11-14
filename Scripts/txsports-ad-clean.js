@@ -1,16 +1,16 @@
 // Original: @ZenmoFeiShi; Loon body adapter: am-tmac.
-// Upstream: https://github.com/ZenmoFeiShi/Qx
+// Upstream: https://github.com/ZenmoFeiShi/Qx (auto-synced)
 function loonText(x) {
- if (typeof x === "string") return x;
- if (!x) return "";
- var b = x instanceof ArrayBuffer ? new Uint8Array(x) : x;
- var s=""; for(var i=0;i<b.length;i++) s+=String.fromCharCode(b[i]);
- try { return decodeURIComponent(escape(s)); } catch(e) { return s; }
+  if (typeof x === "string") return x;
+  if (!x) return "";
+  var b = x instanceof ArrayBuffer ? new Uint8Array(x) : x;
+  var s=""; for(var i=0;i<b.length;i++) s+=String.fromCharCode(b[i]);
+  try { return decodeURIComponent(escape(s)); } catch(e) { return s; }
 }
 var loonDone = $done;
 $done = function(o) {
- if(o && o.body instanceof ArrayBuffer) o.body = new Uint8Array(o.body);
- loonDone(o);
+  if(o && o.body instanceof ArrayBuffer) o.body = new Uint8Array(o.body);
+  loonDone(o);
 };
 (function () {
   function tsqxVarint(b, p) {

@@ -1,15 +1,14 @@
 #!name=腾讯体育净化（Loon）
-#!desc=原作者 ZenmoFeiShi；Loon 二进制适配。需启用 MitM 并信任证书。
+#!desc=原作者 ZenmoFeiShi，自动同步上游；已移除直播比分接口（liveSum / multiUpdate）以免直播卡顿。需启用 MitM 并信任证书。
 #!author=@ZenmoFeiShi / am-tmac（Loon适配）
 #!homepage=https://github.com/ZenmoFeiShi/Qx
+#!upstream_update=2026-11-1
 
 [Script]
 http-response ^https:\/\/config\.ab\.qq\.com\/tab\/GetTabRemoteConfig(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 http-response ^https:\/\/k\.ssp\.qq\.com\/getsdkconfig(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 http-response ^https:\/\/app\.sports\.qq\.com\/init\/config(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 http-response ^https:\/\/app\.sports\.qq\.com\/user\/homePageV2(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
-http-response ^https:\/\/app\.sports\.qq\.com\/m\/match\/liveSum(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
-http-response ^https:\/\/app\.sports\.qq\.com\/match\/multiUpdate(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 http-response ^https:\/\/app\.sports\.qq\.com\/feeds\/(?:home|list)(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 http-response ^https:\/\/sports\.ssp\.qq\.com\/app(?:\?.*)?$ script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/txsports-ad-clean.js, requires-body=true, binary-body-mode=true, timeout=10, tag=txsports-ad-clean
 
