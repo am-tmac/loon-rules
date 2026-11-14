@@ -1,8 +1,0 @@
-#!name=节点阻断检测
-#!desc=判断节点是挂了还是被 GFW/运营商阻断。用法：在节点列表长按某个节点 → 选择「节点阻断检测」。原作 RavelloH（QX 版），Loon 适配 am-tmac，脚本每 6 小时自动同步上游。
-#!author=RavelloH / am-tmac（Loon适配）
-#!homepage=https://gist.github.com/RavelloH/383354955aa3800e1d7e98666e11e16f
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-
-[Script]
-generic script-path=https://raw.githubusercontent.com/am-tmac/loon-rules/main/Scripts/block_check.js, tag=节点阻断检测, timeout=60, img-url=bolt.horizontal.icloud.fill.system
