@@ -42,7 +42,9 @@ var __qxTask = {
       var m = String(req.method || "GET").toLowerCase();
       var fn = $httpClient[m] || $httpClient.get;
       fn(o, function (err, resp, data) {
-        if (err) return reject(err);
+        var tagLog = "[阻断检测] " + m.toUpperCase() + " " + req.url + (o.node ? " via " + o.node : "") + " -> ";
+        if (err) { console.log(tagLog + "错误: " + err); return reject(err); }
+        console.log(tagLog + "HTTP " + (resp && resp.status) + " " + String(data || "").slice(0, 160));
         resolve({ statusCode: resp && resp.status, headers: resp && resp.headers, body: data });
       });
     });
