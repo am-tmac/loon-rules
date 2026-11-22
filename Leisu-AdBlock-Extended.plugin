@@ -1,5 +1,5 @@
 #!name=雷速广告拦截（扩展版）
-#!desc=按用户提供清单封装，含共享广告SDK域名，可能影响其他App的广告/激励视频；未验证iOS实机覆盖。cdn.leisu.com仅拦app-ad路径，需启用MitM并信任证书。不解锁会员。
+#!desc=按用户提供清单封装，含共享广告SDK域名，可能影响其他App的广告/激励视频；未验证iOS实机覆盖。cdn.leisu.com仅拦app-ad路径，app-gateway.leisuapi.com仅拦mobile/ads与banners接口，需启用MitM并信任证书。不解锁会员。
 #!author=am-tmac（按用户提供规则封装）
 #!homepage=https://github.com/am-tmac/loon-rules
 # 来源：用户提供的域名与路径清单；未独立核实其APK分析或IPA版本声明。
@@ -40,8 +40,29 @@ DOMAIN-SUFFIX,gdtimg.com,REJECT
 DOMAIN,mobads.baidu.com,REJECT
 DOMAIN,mobads-logs.baidu.com,REJECT
 
+# 2026-11-22 补充：树先生(ishowshu/qx leisu.snippet 2026-09-09)中本插件尚未覆盖的开屏广告SDK域名
+DOMAIN,api-ad.chuangyuejoy.com,REJECT
+DOMAIN,dsp-tos.mongac.com,REJECT
+DOMAIN,et.tanx.com,REJECT
+DOMAIN,opehs.tanx.com,REJECT
+DOMAIN,sdk-config.tanx.com,REJECT
+DOMAIN,v.adintl.cn,REJECT
+DOMAIN,ad-api.adn-plus.com.cn,REJECT
+DOMAIN,res1.hubcloud.com.cn,REJECT
+DOMAIN,dsp.1rtb.com,REJECT
+DOMAIN,dsp.ads.umeng.com,REJECT
+DOMAIN,analytics.oceanengine.com,REJECT
+DOMAIN,adsmartget.datads.cn,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN,tnc3-alisc1.zijieapi.com,REJECT
+DOMAIN,v2mi.gdt.qq.com,REJECT
+DOMAIN,pgdt.ugdtimg.com,REJECT
+DOMAIN-SUFFIX,optaim.com,REJECT
+
 [Url Rewrite]
 ^https://cdn\.leisu\.com/app-ad/ reject
+# 雷速自家广告接口（开屏/横幅），返回空JSON
+^https?:\/\/app-gateway\.leisuapi\.com\/v\d\/app\/mobile\/(banners|ads) reject-dict
 
 [Mitm]
-hostname = cdn.leisu.com
+hostname = cdn.leisu.com, app-gateway.leisuapi.com
