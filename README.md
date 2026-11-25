@@ -98,4 +98,4 @@ Loon → 配置 → 规则 → 添加远程规则，策略选你的节点组，�
 - 远程规则（推荐）：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/Muse-AI.list`，导入时选择美国出口策略组。
 - 插件：`https://raw.githubusercontent.com/am-tmac/loon-rules/main/Muse-AI.plugin`，需将 `Proxy` 改成实际策略组。两种用法二选一。
 
-参考 [juner922 的规则](https://github.com/juner922/muse-loon-rules) 和 [客户端域名分析](https://github.com/mahdi-salmanzade/meta-muse-teardown)。精简静态快照：保留 Muse 核心及精确登录、中继主机，不接管整个 Meta、Facebook、Instagram、WhatsApp 和共享 CDN。无需 MitM；未做 iOS 实机验证，不保证绕过地区或账号资格限制。
+参考 [juner922 的规则](https://github.com/juner922/muse-loon-rules) 和 [客户端域名分析](https://github.com/mahdi-salmanzade/meta-muse-teardown)。静态快照：保留 Muse 核心及精确登录、中继主机，加入 Facebook 与其资源域名；Facebook 网页和 App 也会走同一策略。不额外加入 Instagram、WhatsApp 或整个 meta.com。无需 MitM；未做 iOS 实机验证，不保证绕过地区或账号资格限制。

@@ -1,11 +1,11 @@
 #!name=Meta Muse AI 分流
-#!desc=仅分流 Muse 与已知依赖；请把 Proxy 换成实际策略组。无需 MitM。
+#!desc=分流 Muse 与 Facebook；请把 Proxy 换成实际策略组。无需 MitM。
 #!author=am-tmac (域名参考 juner922 / mahdi-salmanzade)
 #!homepage=https://github.com/am-tmac/loon-rules
 # 来源参考：https://github.com/juner922/muse-loon-rules
 # 域名分析：https://github.com/mahdi-salmanzade/meta-muse-teardown
-# 精简快照：只保留 Muse、运行环境、精确登录/中继域名。
-# 不接管整个 meta.com、Facebook、Instagram、WhatsApp 或共享 CDN。
+# 静态快照：Muse、运行环境、精确登录/中继域名及 Facebook 基础设施。
+# Facebook 网页、App 和资源会一起走本策略；不接管整个 meta.com、Instagram 或 WhatsApp。
 
 [Rule]
 DOMAIN-SUFFIX,muse.ai,Proxy
@@ -17,8 +17,15 @@ DOMAIN-SUFFIX,ecto1usercontent.com,Proxy
 DOMAIN,hatch.ecto1.ai,Proxy
 DOMAIN,node.hatch.one,Proxy
 DOMAIN,auth.meta.com,Proxy
-DOMAIN,ep7.facebook.com,Proxy
 DOMAIN,meta.privacy-gateway.cloudflare.com,Proxy
 DOMAIN,meta.hpke-keys.privacy-gateway.cloudflare.com,Proxy
 DOMAIN,meta-ohttp-relay-prod.fastly-edge.com,Proxy
 DOMAIN,meta-ohttp-config-prod.fastly-edge.com,Proxy
+
+# Facebook（facebook.com 后缀已覆盖 ep7.facebook.com）
+DOMAIN-SUFFIX,facebook.com,Proxy
+DOMAIN-SUFFIX,facebook.net,Proxy
+DOMAIN-SUFFIX,fbcdn.net,Proxy
+DOMAIN-SUFFIX,fbsbx.com,Proxy
+DOMAIN-SUFFIX,fbpigeon.com,Proxy
+DOMAIN-SUFFIX,fb.com,Proxy
